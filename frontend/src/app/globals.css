@@ -1,0 +1,375 @@
+/* Container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-blue {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: #0069d9;
+}
+
+.btn-green {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background: #218838;
+}
+
+/* Filters */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Apartments Grid */
+.apartments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.apartment-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apartment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.apartment-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.apartment-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.apartment-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.apartment-meta {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.apartment-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0.5rem 0;
+}
+
+.apartment-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* States */
+.loading-text,
+.no-data-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* === Form Card Styling === */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs & textarea */
+.form-card input,
+.form-card textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  border-color: #4f46e5; /* Indigo */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+.btn-primary {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* === Apartment Details Modal === */
+.details-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.details-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-out;
+  cursor: default;
+}
+
+.details-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.details-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.details-meta {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.details-price {
+  font-size: 1.3rem;
+  color: #28a745;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+.details-desc {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.details-close {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.details-close:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Apartment Details Container */
+.apartment-details {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.apartment-details:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.apartment-details img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.apartment-details .apartment-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Meta info */
+.apartment-details .apartment-meta {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Price */
+.apartment-details .apartment-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+  margin: 1rem 0;
+}
+
+/* Description */
+.apartment-details .apartment-desc {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Grid for details like bedrooms, bathrooms, floor, sqft */
+.apartment-details .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.apartment-details .details-grid p {
+  background: #f7f7f7;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.back-btn {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #0069d9;
+}

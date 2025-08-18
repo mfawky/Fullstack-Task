@@ -71,21 +71,37 @@ The backend uses **Express** and **Prisma** with a PostgreSQL database. The fron
 
 ## Folder Structure
 Fullstack-Task/
+
 ├─ backend/
+
 │ ├─ prisma/
+
 │ │ └─ schema.prisma
+
 │ ├─ node_modules/
+
 │ ├─ index.ts
+
 │ ├─ package.json
+
 │ ├─ tsconfig.json
+
 │ └─ ... other backend files
+
 ├─ frontend/
+
 │ ├─ src/
+
 │ ├─ public/
+
 │ ├─ node_modules/
+
 │ ├─ package.json
+
 │ ├─ tsconfig.json
+
 │ └─ ... other frontend files
+
 └─ README.md
 
 
@@ -110,17 +126,24 @@ DATABASE_URL="postgresql://postgres:postgres@db:5432/postgres?schema=public"
 ## Running the Project
 # Backend
 cd backend
+
 npm install                  # install dependencies
+
 npx prisma generate          # generate Prisma client
+
 npx prisma migrate dev --name init   # apply DB migrations
+
 npm run dev                  # start backend server
 
 # Frontend
 cd frontend
+
 npm install                  # install dependencies
+
 npm run dev                  # start frontend server
 
 
 ## Docker Setup
 docker compose build   # build all images (backend, frontend, db)
+
 docker compose up -d   # start all containers in the background

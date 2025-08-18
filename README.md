@@ -108,16 +108,19 @@ cd Fullstack-Task
 DATABASE_URL="postgresql://postgres:postgres@db:5432/postgres?schema=public"
 
 ## Running the Project
+# Backend
 cd backend
-npm install
-npx prisma generate
-npx prisma migrate dev --name init
-npm run dev
+npm install                  # install dependencies
+npx prisma generate          # generate Prisma client
+npx prisma migrate dev --name init   # apply DB migrations
+npm run dev                  # start backend server
 
+# Frontend
 cd frontend
-npm install
-npm run dev
+npm install                  # install dependencies
+npm run dev                  # start frontend server
+
 
 ## Docker Setup
-docker compose build
-docker compose up -d
+docker compose build   # build all images (backend, frontend, db)
+docker compose up -d   # start all containers in the background

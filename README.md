@@ -15,8 +15,6 @@ A fullstack web application with a Next.js frontend and an Express + Prisma back
 - [Environment Variables](#environment-variables)
 - [Running the Project](#running-the-project)
 - [Docker Setup](#docker-setup)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 

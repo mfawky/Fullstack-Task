@@ -50,8 +50,8 @@ The backend uses **Express** and **Prisma** with a PostgreSQL database. The fron
 - Next.js
 - React
 - TypeScript
-- Tailwind CSS (if used)
-- Axios / Fetch API
+- CSS
+- Axios
 
 **Backend:**
 
@@ -70,5 +70,54 @@ The backend uses **Express** and **Prisma** with a PostgreSQL database. The fron
 ---
 
 ## Folder Structure
+Fullstack-Task/
+├─ backend/
+│ ├─ prisma/
+│ │ └─ schema.prisma
+│ ├─ node_modules/
+│ ├─ index.ts
+│ ├─ package.json
+│ ├─ tsconfig.json
+│ └─ ... other backend files
+├─ frontend/
+│ ├─ src/
+│ ├─ public/
+│ ├─ node_modules/
+│ ├─ package.json
+│ ├─ tsconfig.json
+│ └─ ... other frontend files
+└─ README.md
 
 
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js >= 20
+- npm >= 10
+- Docker (optional)
+- PostgreSQL
+
+### Clone the repository
+git clone https://github.com/mfawky/Fullstack-Task.git
+cd Fullstack-Task
+
+
+## Environment Variables
+DATABASE_URL="postgresql://postgres:postgres@db:5432/postgres?schema=public"
+
+## Running the Project
+cd backend
+npm install
+npx prisma generate
+npx prisma migrate dev --name init
+npm run dev
+
+cd frontend
+npm install
+npm run dev
+
+## Docker Setup
+docker compose build
+docker compose up -d

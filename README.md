@@ -33,12 +33,10 @@ The backend uses **Express** and **Prisma** with a PostgreSQL database. The fron
 
 ## Features
 
-- RESTful API with full CRUD for apartments
+- RESTful API with some CRUD for apartments
 - Filtering and search functionality
 - TypeScript support for both frontend and backend
 - Dockerized development environment
-- Interactive API documentation with Swagger (optional)
-
 ---
 
 ## Tech Stack
